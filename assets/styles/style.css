@@ -292,3 +292,23 @@ footer .content2 ul li:first-child{
     margin: 1rem 0;
 }
 
+/* MEDIA QUERIE */
+@media screen and (min-width:750px) {
+    header #hamburguer{
+        display: none;
+    }
+    header nav{
+        all: unset;
+        background-color: white;
+    }
+    header nav ul{
+        float: right;
+    }
+    header nav ul li{
+        display: inline-block;
+        color: black;
+    }
+    header nav img{
+        display: none;
+    }
+}
