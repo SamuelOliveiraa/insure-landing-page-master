@@ -283,32 +283,181 @@ footer .content2{
     color: black;
     font-weight: 700;
 }
+footer .content2 ul li{
+    margin: 0.5rem 0;
+}
 footer .content2 ul li:hover{
     text-decoration: underline;
     cursor: pointer;
 }
 footer .content2 ul li:first-child{
     color: var(--dark-grayish-violet);
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 }
 
 /* MEDIA QUERIE */
-@media screen and (min-width:750px) {
-    header #hamburguer{
+@media screen and (min-width:770px) {
+    header{
+        padding: 0.5rem 3.3rem;
+    }
+    header #hamburguer.close{
         display: none;
+        z-index: -11;
     }
     header nav{
-        all: unset;
-        background-color: white;
+        background: white;
+        color: black;
+        width: 60%;
+        height: 100%;
+        top: -5%;
+        left: 35.5%;
+        padding: 1rem;
     }
     header nav ul{
         float: right;
     }
-    header nav ul li{
+    header .list ul li{
         display: inline-block;
+    }
+    header .list ul li:last-child{
+        border: 1px solid black;
+        width: 110px;
+        padding: 0;
+    }
+    header .list ul li:last-child a{
+        margin: 0;
+        line-height: 1.6rem;
+    }
+    header .list ul li a{
         color: black;
+        font-size: 0.85rem;
+        margin-right: 0.5rem;
     }
     header nav img{
         display: none;
+    }
+
+    .sec1 {
+        position: relative;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 17rem;
+    }
+    .sec1 img{
+        position: absolute;
+        width: 39%;
+        height: 130%;
+        top: 20%;
+        bottom: 0;
+        right: 8%;
+    }
+    .sec1 .container2{
+        display: block;
+    }
+    .sec1 .container2 #back1{
+        width: 150px;
+        height: 280px;
+        left: 0;
+        top: 94%;
+    }
+    .sec1 .container2 #back2{
+        width: 270px;
+        height: 350px;
+        top: -35%;
+        right: 0;
+    }
+    .sec1 .container2 .text{
+        text-align: left;
+        padding: 0 0 0 4.5rem;
+        width: 52%;
+        margin: 0;
+    }
+    .sec1 .container2 .text h2{
+        font-size: 2.7rem;
+        line-height: 2.7rem;
+        margin-bottom: 1.5rem;
+    }
+    .sec1 .container2 .text p{
+        width: 100%;
+        font-size: 0.85;
+    }
+    .sec1 .container2 .text .button{
+        margin: 0;
+    }
+    .sec1 .container2 .text .button p{
+        text-align: center;
+    }
+
+    .sec2{
+        text-align: left;
+        display: grid;
+        grid-template-areas:
+        "h2 h2 h2" 
+        "card1 card2 card3";
+        padding: 0 4rem;
+        margin-bottom: 6rem;
+        gap: 3rem;
+    }
+    .sec2 h2{
+        font-size: 3rem;
+        height: 50px;
+        margin: 0;
+        margin-bottom: 2.5rem;
+        grid-area: h2;
+    }
+    .sec2 img{
+        width: 55px;
+    }
+    .sec2 h3{
+        font-size: 1.4rem;
+    }
+    .sec2 p{
+        font-size: 1rem;
+    }
+
+    .sec3{
+        margin: 0 4rem;
+        margin-bottom: 7rem;
+        padding: 1.4rem 1.4rem;
+    }
+    .sec3 img{
+        width: 320px;
+        height: 100%;
+    }
+    .sec3 h2{
+        text-align: left;
+        font-size: 2.2rem;
+        width: 310px;
+        margin: 0;
+    }
+    .sec3 .button{
+        float: right;
+        position: relative;
+        top: 50%;
+        transform: translate(0, -200%);
+    }
+    
+    footer .content1{
+        text-align: left;
+        padding: 3.5rem 5rem 1rem 5rem;
+    }
+    footer .content1 img{
+        display: inline-block;
+    }
+    footer .content1 #back2{
+        width: 440px;
+        height: 250px;
+    }
+    footer .content1 .icons{
+        float: right;
+        width: 200px;
+    }
+    footer .content2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 1rem 2rem 3rem 5rem;
+        text-align: left;
     }
 }
