@@ -13,6 +13,12 @@
     <!--FAVICON-->
     <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/x-icon">
 
+    <!--JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!--BOX-ICON-->
+    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+
     <!--STYLE-->
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
@@ -20,26 +26,32 @@
     <header>
         <img src="/assets/images/logo.svg" alt="Logo" id="logo">
 
-        <img src="./assets/images/icon-hamburger.svg" alt="icon hamburguer" id="hamburguer">
+        <div class="open" id="hamburguer">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
 
         <nav class="list">
             <ul>
                 <li>
-                    How we work
+                    <a href="#sec3">How we work</a>
                 </li>
                 
                 <li>
-                    Blog
+                    <a href="#">Blog</a>
                 </li>
                 
                 <li>
-                    Account
+                    <a href="">Account</a>
                 </li>
 
                 <li>
-                    View Plans
+                    <a href="">View Plans</a>
                 </li>
             </ul>
+
+            <img src="./assets/images/bg-pattern-mobile-nav.svg" alt="back3">
         </nav>
     </header>
 
@@ -50,20 +62,30 @@
             <img src="assets/images/image-intro-mobile.jpg" alt="Image Family">
         </picture>
 
-        <div class="text">
-            <h2>
-                Humanizing your insurance.
-            </h2>
-            <p>
-                Get your life insurance coverage easier and faster. We blend our expertise
-                and technology to help you find the plan that’s right for you. Ensure you
-                and your loved ones are protected.
-            </p>
+        <div class="container2">
+            <picture>
+                <source media="(min-width: 750px)" srcset="./assets/images/bg-pattern-intro-left-desktop.svg" type="image/">
+                <img src="./assets/images/bg-pattern-intro-left-mobile.svg" alt="back mobile" id="back1">
+            </picture>
+            <picture>
+                <source media="(min-width: 750px)" srcset="./assets/images/bg-pattern-intro-right-desktop.svg" type="image/">
+                <img src="./assets/images/bg-pattern-intro-right-mobile.svg" alt="back mobile"  id="back2">
+            </picture>
 
-            <div class="button">
+            <div class="text">
+                <h2>
+                    Humanizing your insurance.
+                </h2>
                 <p>
-                    View Plans
+                    Get your life insurance coverage easier and faster. We blend our expertise
+                    and technology to help you find the plan that’s right for you. Ensure you
+                    and your loved ones are protected.
                 </p>
+                <div class="button">
+                    <p>
+                        View Plans
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -114,7 +136,11 @@
             </div>
         </section>
         
-        <section class="sec3">
+        <section class="sec3" id="sec3">
+            <picture>
+                <source media="(min-width: 750px)" srcset="./assets/images/bg-pattern-how-we-work-desktop.svg" type="image/svg">
+                <img src="./assets/images/bg-pattern-how-we-work-mobile.svg" alt="back">
+            </picture>
             <h2>
                 Find out more about how we work
             </h2>
@@ -129,16 +155,21 @@
 
     <footer>
         <div class="content1">
-            <img src="./assets/images/logo.svg" alt="Logo">
+            <picture>
+                <source media="(min-width: 750px)" srcset="./assets/images/bg-pattern-footer-desktop.svg" type="image/svg">
+                <img src="./assets/images/bg-pattern-footer-mobile.svg" alt="back2" id="back2">
+            </picture>
+            
+            <img src="./assets/images/logo.svg" alt="Logo" id="logo2">
 
             <div class="icons">
-                <img src="./assets/images/icon-facebook.svg" alt="Facebook">
+                <box-icon type='logo' name='facebook-square' class="icon" color="gray"></box-icon>
 
-                <img src="./assets/images/icon-twitter.svg" alt="twitter">
+                <box-icon name='twitter' type='logo' class="icon" color="gray"></box-icon>
 
-                <img src="./assets/images/icon-pinterest.svg" alt="Pinterest">
+                <box-icon name='pinterest' type='logo' class="icon" color="gray"></box-icon>
 
-                <img src="./assets/images/icon-instagram.svg" alt="Instagram">
+                <box-icon type='logo' name='instagram'class="icon" color="gray"></box-icon>
             </div>
         </div>
         
@@ -222,5 +253,7 @@
             </ul>
         </div>
     </footer>
+
+    <script src="./assets/Js/script.js"></script>
 </body>
 </html>
