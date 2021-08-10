@@ -28,9 +28,10 @@ ul, li{
 
 /*  BODY */
 body, html{
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     font-family: var(--font-karla);
+    overflow-x: hidden;
 }
 body h2,h3{
     font-family: var(--font-dm-serif);
