@@ -1,6 +1,10 @@
 $(document).ready(function () {
     
     //I USED JQUERY TO SHOW AND HIDE THE MENU HAMBURGUER AND THE DIV WITH THE CLASS "LIST" FOR BIG SCREENS
+    if(vpWidth > 770){
+        $('#hamburguer').hide()
+        $('.list').show()
+    }
     
     $(window).resize(function() {
         var vpWidth = $(window).width();
