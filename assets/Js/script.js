@@ -25,9 +25,6 @@ $(document).ready(function () {
     
     })
 
-    
-
-
     //I USED JQUERY TO SMOOTH PAGE SCROLL
     $(function(){
         $('li a').click(function(event) {
@@ -40,11 +37,3 @@ $(document).ready(function () {
         });
     });
 })
-
-
-
-/* else if(vpWidth > 770){
-            $("#hamburguer").addClass("close")
-            $("#hamburguer").hide()
-            $('.list').show()
-        }  */
