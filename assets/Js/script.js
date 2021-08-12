@@ -1,33 +1,32 @@
 $(document).ready(function () {
     
     //I USED JQUERY TO SHOW AND HIDE THE MENU HAMBURGUER AND THE DIV WITH THE CLASS "LIST" FOR BIG SCREENS
-    if(vpWidth > 770){
+    
+    var vpWidth = $(window).width();
+
+    $('#hamburguer').click(function() {
+        $(".open").toggleClass("close")
+        $('.list').toggle()
+    })
+    
+    if(vpWidth > 770 ){
         $('#hamburguer').hide()
         $('.list').show()
     }
     
     $(window).resize(function() {
-        var vpWidth = $(window).width();
         if( vpWidth <= 770 ){
             $('#hamburguer').show()
+            $('#hamburguer').addClass('open')
             $('.list').hide()
-            if($("#hamburguer").hasClass("close")){
-                $('#hamburguer').removeClass('close')
-                $("#hamburguer").addClass("open")
-                $('.list').hide()
-            }
+        
         }else if(vpWidth > 770){
             $('#hamburguer').hide()
             $('.list').show()
         }
     });
 
-    $('#hamburguer').click(function() {
-                
-        $(".open").toggleClass("close")
-        $('.list').toggle()
     
-    })
 
     //I USED JQUERY TO SMOOTH PAGE SCROLL
     $(function(){
