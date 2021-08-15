@@ -5,31 +5,24 @@ $(document).ready(function () {
     var vpWidth = $(window).width();
 
     $('#hamburguer').click(function() {
-        $(".open").toggleClass("close")
+        $("#hamburguer").toggleClass("close")
         $('.list').toggle()
     })
     
-    if(vpWidth > 770 ){
-        $('#hamburguer').hide()
-        $('.list').show()
-    }
-    
     $(window).resize(function() {
-        if( vpWidth <= 770 ){
-            $('#hamburguer').show()
-            $('#hamburguer').addClass('open')
-            $('.list').hide()
-        
-        }else if(vpWidth > 770){
-            $('#hamburguer').hide()
+        if(vpWidth > 770){
+            $('#hamburguer').toggleClass()
             $('.list').show()
+        }else if( vpWidth <= 770 ){
+            $('#hamburguer').toggleClass()
+            $('.list').hide()
         }
     });
 
     
 
     //I USED JQUERY TO SMOOTH PAGE SCROLL
-    $(function(){
+    /*$(function(){
         $('li a').click(function(event) {
             event.preventDefault(); 
             var href = $(this).attr('href'); 
@@ -38,5 +31,5 @@ $(document).ready(function () {
                 'scrollTop': offSetTop 
             }, 'slow'); 
         });
-    });
+    });*/
 })
