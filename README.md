@@ -1,4 +1,4 @@
-# Frontend Mentor - Insure landing page
+# Frontend Mentor - Insure landing page - [Site not finished]
 
 ![Design preview for the Insure landing page coding challenge](/assets/design/desktop-preview.jpg)
 
