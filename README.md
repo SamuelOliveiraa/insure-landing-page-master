@@ -1,4 +1,4 @@
-# Frontend Mentor - Insure landing page - [Site not finished]
+# Frontend Mentor - Insure landing page
 
 ![Design preview for the Insure landing page coding challenge](/assets/design/desktop-preview.jpg)
 
@@ -19,6 +19,7 @@ My biggest difficulties in this project was adjusting the image of the family at
 * JAVASCRIPT
 * JQUERY
 * Media-queries
+* Design Responsive
 
 ## Access My Resolution 💻
 
