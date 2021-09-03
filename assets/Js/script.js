@@ -4,32 +4,62 @@ $(document).ready(function () {
     
     var vpWidth = $(window).width();
 
-    $('#hamburguer').click(function() {
-        $("#hamburguer").toggleClass("close")
-        $('.list').toggle()
-    })
+    $('#hamburguer').show()
+    $('#hamburguer').removeClass('close')
+    $('.list').hide()
+
+    if(vpWidth >= 720){
+        $('#hamburguer').hide()
+        $('.list').show()
+    }else{
+        $('#hamburguer').show()
+        $('.list').hide()
+
+        $('#hamburguer').click(function() {
+            $('#hamburguer').toggleClass('close')
+            $('.list').toggle()
+        })
+    }
     
     $(window).resize(function() {
-        if(vpWidth > 770){
-            $('#hamburguer').toggleClass()
+        let vpWidth = $(window).width();
+
+        $('#hamburguer').show()
+        $('#hamburguer').removeClass('close')
+        $('.list').hide()
+
+        if(vpWidth > 720){
+            $('#hamburguer').hide()
             $('.list').show()
-        }else if( vpWidth <= 770 ){
-            $('#hamburguer').toggleClass()
+        }else{
+            $('#hamburguer').show()
             $('.list').hide()
+    
+            $('#hamburguer').click(function() {
+                $('#hamburguer').toggleClass('close')
+                $('.list').toggle()
+            })
         }
     });
+    $("#li4").hover(function() {
+            
+            $(this).css('background', 'black');
+            $('#link4').css('color', 'white')
+    },
+        function(){
+            //Ao remover o cursor da div
+            $(this).css('background', 'white');
+            $('#link4').css('color', 'black')
+        }
+    );
 
-    
-
-    //I USED JQUERY TO SMOOTH PAGE SCROLL
-    /*$(function(){
-        $('li a').click(function(event) {
-            event.preventDefault(); 
-            var href = $(this).attr('href'); 
-            var offSetTop = $(href).offset().top; 
-            $('html, body').animate({ 
-                'scrollTop': offSetTop 
-            }, 'slow'); 
-        });
-    });*/
+    $('nav ul li a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        var id = $(this).attr('href'),
+                targetOffset = $(id).offset().top;
+                
+        $('html, body').animate({ 
+            scrollTop: targetOffset - 100
+        }, 500);
+    });
 })
